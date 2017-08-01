@@ -3,14 +3,15 @@
 <h3>NO GUARANTEE: use it "as is", without warranties or conditions of any kind.</h3>
 
 <h3>move.sh description</h3>
-move.sh works same as copy.sh but deletes original files after successfull copy. You can use it in pair with nullfs to mark bad blocks on device with slow reading.  
-Example of usage:  
-$ sudo f3write /mnt    (writing a bunch of big files to fill target device)  
-$ sudo nullfs /nullfs  (mounting filesystem that destroy all information on write)  
-$ sudo ./move.sh /mnt/ /nullfs/  
-$ cd /mnt && sudo mkdir DONOTDELETETHISDIR && sudo mv * DONOTDELETETHISDIR/  
+move.sh works same as copy.sh but deletes original files after successfull copy. You can use it in pair with nullfs to mark bad blocks on device with slow reading.</br>
+Example of usage:</br>
+$ sudo f3write /mnt    (writing a bunch of big files to fill target device)</br>
+$ sudo nullfs /nullfs  (mounting filesystem that destroy all information on write)</br>
+$ sudo ./move.sh /mnt/ /nullfs/</br>
+$ cd /mnt && sudo mkdir DONOTDELETETHISDIR && sudo mv * DONOTDELETETHISDIR/</br>
 
-Enjoy your still working hard drive!  
+Enjoy your still working hard drive!</br>
+Based on comment at geektimes.ru, but I can't find it now...
 Original description below
 
 <h3>Description</h3>
