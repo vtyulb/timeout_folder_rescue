@@ -2,6 +2,17 @@
 
 <h3>NO GUARANTEE: use it "as is", without warranties or conditions of any kind.</h3>
 
+<h3>move.sh description</h3>
+move.sh works same as copy.sh but deletes original files after successfull copy. You can use it in pair with nullfs to mark bad blocks on device with slow reading.  
+Example of usage:
+$ sudo f3write /mnt    (writing a bunch of big files to fill target device)
+$ sudo nullfs /nullfs  (mounting filesystem that destroy all information on write)
+$ sudo ./move.sh /mnt/ /nullfs/
+$ cd /mnt && sudo mkdir DONOTDELETETHISDIR && sudo mv * DONOTDELETETHISDIR/
+
+Enjoy your still working hard drive!  
+Original description below
+
 <h3>Description</h3>
 
 Bash script, that copies contents of source folder to the destination folder file by file. If copying process for single file hangs for more than 10 seconds, or returns input/output error, script skips this file and logs its name. If destination file already exists, script skips file without logging its name. Folder structure is recreated according to source tree, however, no files or folders are deleted or overwritten in destination.

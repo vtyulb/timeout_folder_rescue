@@ -119,7 +119,7 @@ currentdir=`pwd`
 cd "$csource"
 
 # create a file tree
-filetree="/tree.txt"
+filetree="/tmp/tree.txt"
 # find a filename that does not exists in the source folder
 while [ -e $filetree ]
 do
